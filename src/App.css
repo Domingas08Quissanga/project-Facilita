@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background: #eee;
+    background: white;
 }
 ul , ol{
     list-style: none;
@@ -15,4 +15,8 @@ a{
 }
 img{
     object-fit: cover;
+}
+button{
+    border: none;
+    outline: none;
 }

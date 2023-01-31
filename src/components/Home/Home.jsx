@@ -1,7 +1,7 @@
 import React from 'react';
 import * as C from './HomeStyled'
 import imgHome from '../../assets/images/backgrounds/background.png'
-import { BsSearch } from "react-icons/bs";
+import { BsSearch , BsChevronLeft , BsChevronRight} from "react-icons/bs";
 
 
 function Home() {
@@ -25,6 +25,18 @@ function Home() {
           </form>
         </C.cardTextHome>
       </C.cardImgHome>
+      <C.cardCategoria>
+        <button>
+          <BsChevronLeft/>
+        </button>
+        <C.cardslidCategoria>
+          
+        </C.cardslidCategoria>
+        <button>
+          <BsChevronRight/>
+        </button>
+
+      </C.cardCategoria>
        
     </C.Container>
     

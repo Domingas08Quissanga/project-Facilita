@@ -25,6 +25,10 @@ export const Nav = styled.nav`
     > ul li a{
         color: #3e3e3e;
         font-weight: 650;
+        transition: .3s;;
+    }
+    > ul li a:hover{
+        color: #3e3e;
     }
 `
 
@@ -33,10 +37,22 @@ export const logo = styled.h1`
         color: #3e3e3e;
         font-family: Segoe print;
         font-size: 2.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
     }
     a span{
         color: #3e3a;
         font-family: Segoe print;
+    }
+
+    a img{
+        width: 2.5rem;
+        height: auto;
+        object-fit: cover;
+
+
     }
 `
 
@@ -44,8 +60,24 @@ export const cardBtnHeader = styled.div`
     display: flex;
     align-items: center;
     gap: 20px;
+    
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        
+    }
 
-  
+    a span:first-child{
+        font-size: 15px;
+
+    }
+    
+    a span:last-child{
+        font-size: 20px;
+      
+    }
 `
 
 export const cardImgHeader = styled.div`
@@ -60,9 +92,4 @@ export const cardImgHeader = styled.div`
         object-fit: cover;
         border-radius: 50%;
     }
-`
-export const cardLogo = styled.img`
-width: 20%;
-height: 20%;
-
 `

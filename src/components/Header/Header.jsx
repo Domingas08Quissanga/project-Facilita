@@ -3,19 +3,18 @@ import * as C from './HeaderStyled'
 import { Link } from 'react-router-dom';
 import imgUser from '../../assets/images/users/masculino.png'
 import logo from '../../assets/images/logo/Logo.svg'
+import { BsPersonFill } from "react-icons/bs";
 // import { Container } from './styles';
 
 function Header() {
   return (
     <C.Header>
         <C.Nav>
-             <C.logo>
-                <cardLogo> <Link to='/'>
-                <img src={logo} alt="" />
+            <C.logo>
+                <Link to='/'>
+                    <img src={logo} alt="" />
+                    <span>Faci</span>lita
                 </Link>
-                </cardLogo>
-        
-                <Link to='/'><span>Faci</span>lita</Link>
            </C.logo>
             <ul>
                 <li>
@@ -32,10 +31,11 @@ function Header() {
                 </li>
             </ul>
             <C.cardBtnHeader>
-                <Link to='/Login'>Entrar </Link>
-                <C.cardImgHeader>
-                    <img src={imgUser} alt="" />
-                </C.cardImgHeader>
+                 <Link to='/Login'>
+                     <span>Entrar</span>   
+                     <span><BsPersonFill/></span> 
+                 </Link>
+             
             </C.cardBtnHeader>
         </C.Nav>
     </C.Header>

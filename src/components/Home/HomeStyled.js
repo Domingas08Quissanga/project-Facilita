@@ -66,3 +66,34 @@ export const cardTextHome = styled.div`
     }
 
 `
+export const cardCategoria = styled.div`
+    width: 80%;
+    border: 1px solid red;
+    padding: 1rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    button{
+        font-size: 18px;
+        color: #3e3e3e;
+        height: 70px;
+        width: 30px;
+        line-height: 70px;
+        text-align: center;
+        border: 1px solid #ebebeb;
+        background: #ffffff;
+        transition: .3s;
+    }
+    button:hover{
+        background: #ebebeb;
+    }
+`
+
+export const cardslidCategoria = styled.div`
+    width: 90%;
+    height: 240px;
+    border: 1px solid red;
+`
