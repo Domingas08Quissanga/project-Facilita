@@ -1,6 +1,5 @@
 import  * as C from './ButtonStyled'
 
-
 function Button( { text } ) {
 
     return (

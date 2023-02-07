@@ -5,7 +5,8 @@ import { BsSearch , BsChevronLeft , BsChevronRight} from "react-icons/bs";
 import { Slide } from 'react-slideshow-image';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
-
+import frutas from '../../assets/images/cards/Frutas.png'
+import {ImagesMock} from '../mock/images.jsx'
 
 
 function Home() {
@@ -54,38 +55,20 @@ function Home() {
   
 
       <C.cardInner>
-      <button>
-            <BsChevronLeft/>
-          </button>
-           <C.cardItem>
-              <C.cardCarousel>
-                <Link to='/'>
-                  <p >Todos</p>
-                </Link>
+        <button>
+          <BsChevronLeft/>
+            </button>
+          <C.cardItem>
+          {
+            ImagesMock.map(({imageSrc,price,description},key)=>
+              <C.cardCarousel key={key}>
+                <img src={imageSrc} alt="fruta" />
+                <div>{price}</div>
+                <p>{description}</p>
               </C.cardCarousel>
-                
-              <C.cardCarousel>
-              <Link to='/'>
-                  <p >Frutas</p>
-                  <img src="" alt="" />
-                </Link>
-                </C.cardCarousel>
-
-                <C.cardCarousel>
-                <Link to='/'>
-                  <p >vegeitais</p>
-                  <img src="" alt="" />
-                </Link>
-                </C.cardCarousel>
-
-                <C.cardCarousel>
-                <Link to='/'>
-                  <p >Tubérculos</p>
-                  <img src="" alt="" />
-                </Link>
-                </C.cardCarousel>
-           </C.cardItem>
-
+            )
+          }
+          </C.cardItem>
         <button>
           <BsChevronRight/>
         </button>

@@ -102,18 +102,18 @@ export const cardInner= styled.div`
 
 export const cardItem= styled.div`
     width: 150%;
-    height: 165px;
     border: 1px solid violet;
     display:flex;
+    flex-wrap:wrap;
     text-align: center;
     justify-content: center;
     
    
 `
 export const cardCarousel= styled.div`
-    width: 20%;
+    width: 12rem;
+    max-width:12rem;
     height: 200px;
-    display:flex;
     border: 1px solid green;
     border-radius: 40px;
     margin: 20px;
