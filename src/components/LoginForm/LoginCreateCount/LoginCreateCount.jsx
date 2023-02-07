@@ -2,10 +2,6 @@ import React from 'react';
 import Button from '../../Buttons/Button'
 import Inputs from '../../Inputs/Inputs';
 import * as C from '../LoginCount/LoginCountStyled';
-import { Link } from 'react-router-dom';
-
-
-// import { Container } from './styles';
 
 function LoginCreateCount() {
   return (

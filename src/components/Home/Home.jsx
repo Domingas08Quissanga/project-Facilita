@@ -4,8 +4,6 @@ import * as C from './HomeStyled'
 import { BsSearch , BsChevronLeft , BsChevronRight} from "react-icons/bs";
 import { Slide } from 'react-slideshow-image';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Link } from 'react-router-dom';
-import frutas from '../../assets/images/cards/Frutas.png'
 import {ImagesMock} from '../mock/images.jsx'
 
 
