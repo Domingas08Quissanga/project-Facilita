@@ -18,7 +18,7 @@ export const ImagesMock=[
     },
     {
         imageSrc: frutas,
-        price:10,
+        price:11,
         description:'esse é um produto muito bom'
     }
 ]
