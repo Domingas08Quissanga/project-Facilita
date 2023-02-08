@@ -1,10 +1,11 @@
 import 'react-slideshow-image/dist/styles.css';
 import React from 'react';
-import * as C from './HomeStyled'
+import * as C from './HomeStyled';
 import { BsSearch , BsChevronLeft , BsChevronRight} from "react-icons/bs";
 import { Slide } from 'react-slideshow-image';
 import 'bootstrap/dist/css/bootstrap.css';
 import {ImagesMock} from '../mock/images.jsx'
+import { Footer } from '../Footer/Footer'
 
 
 function Home() {
@@ -67,14 +68,15 @@ function Home() {
             )
           }
           </C.cardItem>
+          
         <button>
           <BsChevronRight/>
         </button>
 
       </C.cardInner>
-       
+        <Footer/>
     </C.Container>
-    
+ 
   );
 }
 

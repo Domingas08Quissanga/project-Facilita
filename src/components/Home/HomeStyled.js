@@ -74,7 +74,6 @@ export const cardTextHome = styled.div`
 `
 export const cardInner= styled.div`
     width: 80%;
-    border: 1px solid red;
     padding: 1rem;
     margin: 0 auto;
     display: flex;
@@ -102,7 +101,6 @@ export const cardInner= styled.div`
 
 export const cardItem= styled.div`
     width: 150%;
-    border: 1px solid violet;
     display:flex;
     flex-wrap:wrap;
     text-align: center;
@@ -114,7 +112,6 @@ export const cardCarousel= styled.div`
     width: 12rem;
     max-width:12rem;
     height: 200px;
-    border: 1px solid green;
     border-radius: 40px;
     margin: 20px;
     text-align: center;

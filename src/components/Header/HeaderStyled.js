@@ -8,7 +8,7 @@ export const Header = styled.header`
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
+    position: absolute;
 `
 
 export const Nav = styled.nav`
