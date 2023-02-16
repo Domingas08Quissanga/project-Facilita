@@ -1,24 +1,25 @@
 import styled from "styled-components";
 
-
-
 export const Container= styled.div`
     width: 100%;
     padding-top: 70px;
     
 
+    
+
 `
 export const cardSlideHome = styled.div`
     width: 100%;
-    height: 280px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    
+
 
     img{
         width: 100%;
-        height: 100%;
+        height: 280px;
         transition: all 0.5s ease-in-out;
     }
     &:hover img {
@@ -79,7 +80,6 @@ export const cardInner= styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 5rem;
 
 
     button{
@@ -100,21 +100,81 @@ export const cardInner= styled.div`
 `
 
 export const cardItem= styled.div`
-    width: 150%;
+    width: 100%;
     display:flex;
     flex-wrap:wrap;
-    text-align: center;
     justify-content: center;
-    
-   
 `
 export const cardCarousel= styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     width: 12rem;
-    max-width:12rem;
-    height: 200px;
-    border-radius: 40px;
+    border-radius: 10px;
     margin: 20px;
     text-align: center;
     justify-content: center;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 1px 1px 7px gray;
+    transform: scale(0.9);
+    cursor: pointer;
+    transition: 0.2s;
+    text-align: left;
+
+    hr {
+        z-index: 99999;
+        border: 0;
+        border-top: 3px solid brown;
+    }
+
+    :hover{
+        transform: scale(1);
+        transition: 0.2s;
+        box-shadow: 1px 1px 7px lightgreen;
+    }
+
+    img  {
+        height: 80px;
+        width: 100%;
+    }
+
+    .content{
+        width: 100%;
+        margin: .3rem;
+        p {
+            :first-child{
+                font-size: 18px;
+                color: balck;
+                font-weight: bold;
+            }
+            :last-child {
+                padding: .3rem;
+                background-color: lightgreen;
+                color: green;
+                width: 90px;
+                font-weight: bold;
+                border-radius: 2rem;
+                text-align: center;
+            }
+        }
+    }
+
+    .addShop {
+        font-size: 12px;
+        line-height: 0%;
+        background-color: green;
+        width: max-content;
+        height: 3rem;
+        color: white;
+        font-weight: bold;
+        padding: 0.5rem;
+        border-radius: 10px;
+
+        :hover {
+            background-color: lightgreen;
+        }
+    }
    
 `

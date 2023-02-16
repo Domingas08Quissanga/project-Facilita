@@ -15,7 +15,12 @@ export const Nav = styled.nav`
     width: 90%;
     display: flex;
     align-items: center;
+    color: #000;
     justify-content: space-between;
+
+    .HideSubCategory{
+        display: none;
+    }
 
     > ul{
         display: flex;
@@ -23,7 +28,7 @@ export const Nav = styled.nav`
         gap: 25px;
     }
     > ul li a{
-        color: #3e3e3e;
+        color: #000;
         font-weight: 650;
         transition: .3s;;
     }

@@ -1,12 +1,14 @@
-import { Container } from "./FooterSyled"
+import * as C from "./FooterSyled"
 
 import logo from "../../assets/Logo.svg"
 
 
 export const Footer = () => {
     return (
-        <Container>
+        <C.Container>
             <div>
+
+          
                 <div id='logo'>
                     <img src={logo} alt="logo" width="50px" />
                     <h4>Facilita</h4>
@@ -16,7 +18,8 @@ export const Footer = () => {
                    <li>Segurança</li>
                   <li>Informação</li>
                 </ul>
-                <greeLine></greeLine>
+
+                  <C.greenLine></C.greenLine>
                 <ul className="footer-ul">
                     <li>logo1</li>
                     <li>logo2</li>
@@ -26,7 +29,7 @@ export const Footer = () => {
                     <input type='email' placeholder='Inscreva-se na nossa newsletter'/>
                     <button className="inscrever">Increver-se</button>
                 </div>
-            </div>
-        </Container>
+              </div>
+        </C.Container>
     )
 }

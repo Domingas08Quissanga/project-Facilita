@@ -1,11 +1,32 @@
 import React from 'react';
+import { useState } from 'react';
 import * as C from './HeaderStyled'
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo/Logo.svg'
 import { BsPersonFill } from "react-icons/bs";
 // import { Container } from './styles';
 
+
+
 function Header() {
+    const [open, setOpen] = useState(false);
+
+    const categorias = [
+        {
+            id: 1,
+            name: "Frutas"
+        },
+        {
+            id: 2,
+            name: "Verduras"
+        },
+        {
+            id: 3,
+            name: "Vegentais"
+        },
+    ]
+
+    console.log(open, 'aqui')
   return (
     <C.Header>
         <C.Nav>
@@ -17,16 +38,26 @@ function Header() {
            </C.logo>
             <ul>
                 <li>
-                    <Link to='/'>Inicio</Link>
+                    <Link to='/'>Início</Link>
+                </li>
+    
+               
+                <li onClick={() => setOpen(true)}>
+                    Produtos
+                    <ul className={open ? 'showSubCategory': 'HideSubCategory'}>
+                        {    
+                                categorias.map((itens, index) => (
+                                    <li key={index}>{itens.name}</li>
+                                ))
+                        }
+                    </ul>
+                </li>
+                
+                <li>
+                    <Link to='/Sobre'>Sobre nós</Link>
                 </li>
                 <li>
-                    <Link to='/Produtos'>Produtos</Link>
-                </li>
-                <li>
-                    <Link to='/Sobre'>Sobre nos</Link>
-                </li>
-                <li>
-                    <Link to='/Contatos'>Contatos</Link>
+                    <Link to='/Contact'>Contatos</Link>
                 </li>
             </ul>
             <C.cardBtnHeader>

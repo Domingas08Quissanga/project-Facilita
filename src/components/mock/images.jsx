@@ -3,22 +3,18 @@ import frutas from '../../assets/images/cards/Frutas.png'
 export const ImagesMock=[
     {
         imageSrc: frutas,
-        price:189,
-        description:'isso é maindioca'
+        description:'Todos'
     },
     {
         imageSrc: frutas,
-        price:180,
-        description:'esse é um produto muito bom'
+        description:'Frutas'
     },
     {
         imageSrc: frutas,
-        price:170,
-        description:'esse é um produto muito bom'
+        description:'Vegetais'
     },
     {
         imageSrc: frutas,
-        price:11,
-        description:'esse é um produto muito bom'
+        description:'Tuberculos'
     }
 ]

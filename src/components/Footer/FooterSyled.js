@@ -25,7 +25,7 @@ const Container = styled.div`
 
         input {
             border: none;
-            background-color: #505050;
+            background-color: silver;
             padding: .5rem;
             border-radius: 10px;
             width: 300px;
@@ -40,15 +40,18 @@ const Container = styled.div`
                 margin-left: .5rem;
                 padding: .5rem;
                 border-radius: 10px;
-                color: white;
+                color: #000;
                 font-weight: bold;
-                background-color: #0D4911;
+                background-color:#0D4911;
                 transform: scale(0.9);
                 transition: 0.2s;
 
                 :hover {
                     transition: 0.2s;
                     transform: scale(1);
+                    color: #fff;
+                    background-color: #3e0;
+
                 }
             }
         }
@@ -61,7 +64,7 @@ const Container = styled.div`
         li {
             padding: 1rem;
             list-style: none;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: thin;
             transform: scale(0.9);
             transition: 0.2s;
@@ -74,6 +77,14 @@ const Container = styled.div`
   
   
   }
+`
+export const greenLine = styled.div`
+width: 2rem;
+height: 0.5rem;
+background-color: #3e0e;
+justify-content: center;
+text-align: center;
+
 `
 
 
