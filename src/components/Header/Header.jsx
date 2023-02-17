@@ -26,7 +26,6 @@ function Header() {
         },
     ]
 
-    console.log(open, 'aqui')
   return (
     <C.Header>
         <C.Nav>

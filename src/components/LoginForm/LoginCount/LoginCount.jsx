@@ -22,6 +22,7 @@ function LoginCount() {
           <Inputs label='Senha' type='password' /> 
           <Button text='Entrar'/>
           <Link to='createCount'>Crie sua conta</Link>
+          <Link to='/'>voltar</Link>
           
         </form>
         

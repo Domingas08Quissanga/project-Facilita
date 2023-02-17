@@ -71,7 +71,30 @@ const Container = styled.div`
             :hover {
                 transform: scale(1);
                 transition: 0.2s;
-                color: green;
+                color: #3e0e;
+            }
+        }
+  
+  
+  }
+  .footer-ulicon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            padding: 1rem;
+            list-style: none;
+            font-size: 16px;
+            font-weight: thin;
+            transform: scale(0.9);
+            transition: 0.2s;
+            font-size: 3rem;
+            :hover {
+                transform: scale(1);
+                transition: 0.2s;
+                color: #3e0e;
+                font-size: 2rem;
             }
         }
   
@@ -81,7 +104,8 @@ const Container = styled.div`
 export const greenLine = styled.div`
 width: 30rem;
 margin: auto;
-border-top: 1px solid green;
+border-top: 3px solid green;
+
 `
 
 

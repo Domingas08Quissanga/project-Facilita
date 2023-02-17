@@ -1,6 +1,6 @@
 import * as C from "./FooterSyled"
-
 import logo from "../../assets/Logo.svg"
+import { BsFacebook , BsWhatsapp,BsFillChatDotsFill} from "react-icons/bs"
 
 
 export const Footer = () => {
@@ -20,10 +20,11 @@ export const Footer = () => {
                 </ul>
 
                   <C.greenLine></C.greenLine>
-                <ul className="footer-ul">
-                    <li>logo1</li>
-                    <li>logo2</li>
-                    <li>logo3</li>
+                <ul className="footer-ulicon">
+                    <a href="https://www.facebook.com/"><li><BsFacebook/></li></a>
+                   <a href="https://web.whatsapp.com/"><li><BsWhatsapp/></li></a>
+                    <a href="https://mail.google.com/mail/u/0/?tab=km#inbox"><li><BsFillChatDotsFill/></li></a>
+                  
                 </ul>
                 <div className="newsletter">
                     <input type='email' placeholder='Inscreva-se na nossa newsletter'/>
