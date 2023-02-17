@@ -42,7 +42,7 @@ function Header() {
                 </li>
     
                
-                <li onClick={() => setOpen(true)}>
+                <li onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
                     Produtos
                     <ul className={open ? 'showSubCategory': 'HideSubCategory'}>
                         {    

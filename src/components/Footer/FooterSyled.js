@@ -79,12 +79,9 @@ const Container = styled.div`
   }
 `
 export const greenLine = styled.div`
-width: 2rem;
-height: 0.5rem;
-background-color: #3e0e;
-justify-content: center;
-text-align: center;
-
+width: 30rem;
+margin: auto;
+border-top: 1px solid green;
 `
 
 

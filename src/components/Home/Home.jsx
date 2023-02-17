@@ -16,6 +16,7 @@ function Home() {
     
     <C.Container>
       <SlideImg/>
+      <h2 className='Categorias'>Categorias</h2>
       <C.cardInner>
         <button>
           <BsChevronLeft/>
@@ -34,6 +35,7 @@ function Home() {
               <BsChevronRight/>
             </button>
           </C.cardInner>
+         <h3 className='Recentes'>Produtos Recentes</h3> 
       <C.cardInner>
           <C.cardItem>
            {

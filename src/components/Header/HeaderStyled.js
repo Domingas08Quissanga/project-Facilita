@@ -17,15 +17,19 @@ export const Nav = styled.nav`
     align-items: center;
     color: #000;
     justify-content: space-between;
+    
 
     .HideSubCategory{
         display: none;
-    }
+        
+
+        }
 
     > ul{
         display: flex;
         align-items: center;
         gap: 25px;
+        
     }
     > ul li a{
         color: #000;

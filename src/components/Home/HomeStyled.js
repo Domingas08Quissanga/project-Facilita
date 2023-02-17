@@ -4,8 +4,16 @@ export const Container= styled.div`
     width: 100%;
     padding-top: 70px;
     
-
-    
+    .Categorias {
+        color: green;
+        text-align: center;
+        padding-top:50px ;
+    }
+    .Recentes{
+        color: green;
+        text-align: center;
+        padding-top:50px ;  
+    }
 
 `
 export const cardSlideHome = styled.div`
