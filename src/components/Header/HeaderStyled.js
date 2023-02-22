@@ -1,104 +1,135 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Header = styled.header`
-    width: 100%;
-    height: 70px;
-    background: white;
-    box-shadow: 0px 4px 16px rgb( 0 , 0 , 0 , 0.2 );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
+  width: 100%;
+  height: 70px;
+  background: white;
+  box-shadow: 0px 4px 16px rgb(0, 0, 0, 0.2);
+
+  ul {
+    margin: 0;
+  }
 `
 
 export const Nav = styled.nav`
-    width: 90%;
+  width: 90%;
+  height: 100%;
+  color: #222226;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 0 auto;
+
+  .HideSubCategory {
+    display: none;
+  }
+
+  > ul {
     display: flex;
     align-items: center;
-    color: #000;
-    justify-content: space-between;
-    
+    height: 70px;
 
-    .HideSubCategory{
-        display: none;
-        
+    gap: 25px;
+  }
 
-        }
+  > ul li a {
+    color: #222226;
+    font-weight: 300;
+    transition: 0.3s;
+  }
 
-    > ul{
-        display: flex;
-        align-items: center;
-        gap: 25px;
-        
-    }
-    > ul li a{
-        color: #000;
-        font-weight: 650;
-        transition: .3s;;
-    }
-    > ul li a:hover{
-        color: #3e3e;
-    }
+  > ul li a:hover {
+    color: #3e3e;
+  }
 `
 
 export const logo = styled.h1`
-    a{
-        color: #3e3e3e;
-        font-family: Segoe print;
-        font-size: 2.1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
-    }
-    a span{
-        color: #3e3a;
-        font-family: Segoe print;
-    }
+  a {
+    color: #3e3e3e;
+    font-size: 1rem;
+    gap: 5px;
 
-    a img{
-        width: 2.5rem;
-        height: auto;
-        object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    font-weight: 600;
+  }
 
-    }
+  a span {
+    color: #3e3a;
+  }
+
+  a img {
+    width: 2.5rem;
+    height: auto;
+    object-fit: cover;
+  }
 `
 
 export const cardBtnHeader = styled.div`
+  a {
     display: flex;
-    align-items: center;
-    gap: 20px;
-    
-    a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 7px;
-        
-    }
+    gap: 7px;
 
-    a span:first-child{
-        font-size: 15px;
-
+    span {
+      font-size: 15px;
     }
-    
-    a span:last-child{
-        font-size: 20px;
-      
-    }
+  }
 `
 
 export const cardImgHeader = styled.div`
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: #eee;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #eee;
 
-    img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 50%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+`
+export const ProductNavegation = styled.li`
+  section {
+    position: absolute;
+  }
+
+  :hover {
+    font-weight: 600;
+
+    div {
+      display: inline-block;
+      display: flex;
+      flex-direction: column;
     }
+  }
+
+  div {
+    background: white;
+    border: 1px solid #eee;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    padding: 10px 15px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+
+    font-size: 14px;
+
+    position: relative;
+    top: 6px;
+    z-index: 1;
+    display: none;
+
+    a {
+        :focus {
+            color: #3e3a;
+        }
+    }
+  }
 `

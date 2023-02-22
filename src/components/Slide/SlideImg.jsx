@@ -1,6 +1,6 @@
 import React from 'react';
 import { BsSearch} from "react-icons/bs";
-import * as C from '../Home/HomeStyled'
+import * as C from '../../page/Home/HomeStyled'
 import { Slide } from 'react-slideshow-image';
 // import { Container } from './styles';
 
