@@ -1,74 +1,71 @@
 import React from 'react';
-import { useState } from 'react';
 import * as C from './HeaderStyled'
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo/Logo.svg'
 import { BsPersonFill } from "react-icons/bs";
+
+import { ShoppingCart } from 'phosphor-react'
 // import { Container } from './styles';
 
-
-
 function Header() {
-    const [open, setOpen] = useState(false);
+    return (
+        <C.Header>
+            <C.Nav>
+                <C.logo>
+                    <Link to='/'>
+                        <img src={logo} alt="" />
+                        <span>Faci<small>lita</small></span>
+                    </Link>
+                </C.logo>
+                <ul>
+                    <li>
+                        <Link to='/'>Início</Link>
+                    </li>
 
-    const categorias = [
-        {
-            id: 1,
-            name: "Frutas"
-        },
-        {
-            id: 2,
-            name: "Verduras"
-        },
-        {
-            id: 3,
-            name: "Vegentais"
-        },
-    ]
+                    <C.ProductNavegation>
+                        Produtos
 
-  return (
-    <C.Header>
-        <C.Nav>
-            <C.logo>
-                <Link to='/'>
-                    <img src={logo} alt="" />
-                    <span>Faci</span>lita
+                        <section>
+                            <div>
+                                <Link to='/Frutas'>
+                                    Frutas
+                                </Link>
+
+                                <Link to='/Verduras'>
+                                    Verduras
+                                </Link>
+
+                                <Link to='/Vegentais'>
+                                    Vegentais
+                                </Link>
+                            </div>
+                        </section>
+                    </C.ProductNavegation>
+
+                    <li>
+                        <Link to='/Sobre'>Sobre nós</Link>
+                    </li>
+
+                    <li>
+                        <Link to='/Contact'>Contatos</Link>
+                    </li>
+                </ul>
+
+                <C.cardBtnHeader>
+                    <Link to='/Login'>
+                        <span>Entrar</span>
+                        <BsPersonFill size={20} />
+                    </Link>
+                </C.cardBtnHeader>
+
+                <Link to='/Carrinho'>
+                    <ShoppingCart
+                        size={24}
+                    />
                 </Link>
-           </C.logo>
-            <ul>
-                <li>
-                    <Link to='/'>Início</Link>
-                </li>
-    
-               
-                <li onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-                    Produtos
-                    <ul className={open ? 'showSubCategory': 'HideSubCategory'}>
-                        {    
-                                categorias.map((itens, index) => (
-                                    <li key={index}>{itens.name}</li>
-                                ))
-                        }
-                    </ul>
-                </li>
-                
-                <li>
-                    <Link to='/Sobre'>Sobre nós</Link>
-                </li>
-                <li>
-                    <Link to='/Contact'>Contatos</Link>
-                </li>
-            </ul>
-            <C.cardBtnHeader>
-                 <Link to='/Login'>
-                     <span>Entrar</span>   
-                     <span><BsPersonFill/></span> 
-                 </Link>
-             
-            </C.cardBtnHeader>
-        </C.Nav>
-    </C.Header>
-  );
+            </C.Nav>
+        </C.Header>
+    );
 }
 
 export default Header;

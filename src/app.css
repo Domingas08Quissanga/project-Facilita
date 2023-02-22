@@ -1,38 +1,39 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  color: #222226;
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body {
+  background: white;
+  position: relative;
+}
 
-*{
-    
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+ul,
+li {
+  list-style: none;
 }
-body{
-    background: white;
-    position: relative;
+a {
+  text-decoration: none;
 }
-ul , ol{
-    list-style: none;
+img {
+  object-fit: cover;
 }
-a{
-    text-decoration: none;
+button {
+  border: none;
+  outline: none;
 }
-img{
-    object-fit: cover;
+input,
+button {
+  border: none;
+  outline: none;
 }
-button{
-    border: none;
-    outline: none;
-}
-input , button{
-    border: none;
-    outline: none;
-}
-.textAndInput{ 
-     width: 100%;
-    height: 280px;
-    position: relative;
-    text-align: center;
-    justify-content: center;
+.textAndInput {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  text-align: center;
+  justify-content: center;
 }
