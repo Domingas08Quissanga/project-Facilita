@@ -21,6 +21,12 @@ export const Nav = styled.nav`
 
   margin: 0 auto;
 
+  > section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
   .HideSubCategory {
     display: none;
   }
@@ -36,7 +42,7 @@ export const Nav = styled.nav`
   > ul li a {
     color: #222226;
     font-weight: 300;
-    transition: 0.3s;
+    transition: 0.1s;
   }
 
   > ul li a:hover {
@@ -127,9 +133,41 @@ export const ProductNavegation = styled.li`
     display: none;
 
     a {
-        :focus {
-            color: #3e3a;
-        }
+      :focus {
+        color: #3e3a;
+      }
+    }
+  }
+`
+export const CartContainer = styled.div`
+  a {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    transition: 0.1s;
+
+    :hover {
+      opacity: 0.7;
+    }
+  }
+
+  div {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    span {
+      font-size: 12px;
+      font-weight: 600;
+      color: #2d2d2d;
+    }
+
+    small {
+      font-size: 11px;
+      background: #ddd;
+      border-radius: 26px;
+      padding: 1px 5px;
+      color: #2d2d2d;
     }
   }
 `

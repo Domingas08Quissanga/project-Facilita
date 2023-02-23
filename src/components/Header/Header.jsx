@@ -51,18 +51,28 @@ function Header() {
                     </li>
                 </ul>
 
-                <C.cardBtnHeader>
-                    <Link to='/Login'>
-                        <span>Entrar</span>
-                        <BsPersonFill size={20} />
-                    </Link>
-                </C.cardBtnHeader>
+                <section>
+                    <C.cardBtnHeader>
+                        <Link to='/Login'>
+                            <span>Entrar</span>
+                            <BsPersonFill size={20} />
+                        </Link>
+                    </C.cardBtnHeader>
 
-                <Link to='/Carrinho'>
-                    <ShoppingCart
-                        size={24}
-                    />
-                </Link>
+                    <C.CartContainer>
+                        <Link to='/Carrinho'>
+                            <div>
+                                <span>Meu carrinho</span>
+                                <small>4 items</small>
+                            </div>
+
+                            <ShoppingCart
+                                size={24}
+                                color={"#929292"}
+                            />
+                        </Link>
+                    </C.CartContainer>
+                </section>
             </C.Nav>
         </C.Header>
     );
