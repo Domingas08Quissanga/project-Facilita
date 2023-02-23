@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container= styled.div`
     width: 100%;
-    padding-top: 70px;
     
     .Categorias {
         color: green;
@@ -89,7 +88,6 @@ export const cardInner= styled.div`
     align-items: center;
     justify-content: space-between;
 
-
     button{
         font-size: 18px;
         color: #3e3e3e;
@@ -101,6 +99,7 @@ export const cardInner= styled.div`
         background: #ffffff;
         transition: .3s;
     }
+
     button:hover{
         background: #ebebeb;
         transition: .5s;

@@ -8,7 +8,7 @@ const Container = styled.div`
   cursor: pointer;
 
   div {
-    padding: 0.5rem;
+    padding: 2rem 0rem 1rem 0rem;
 
     #logo {
       display: flex;
