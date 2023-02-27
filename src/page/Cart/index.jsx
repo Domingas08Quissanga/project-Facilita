@@ -1,8 +1,46 @@
 import { Trash, User } from 'phosphor-react';
-import productImg from '../../assets/images/cards/limão.jpeg'
+import { useState } from 'react';
+import { MdRemoveCircleOutline, MdAddCircleOutline } from 'react-icons/md'
+import laranja from '../../assets/images/cards/laranja.webp'
+import melancia from '../../assets/images/cards/melancia.jpeg'
+import mandioca from '../../assets/images/cards/mandioca.jpg'
 import * as C from './cartStyle'
 
 function Cart() {
+    const [products, setProducts] = useState([
+        {
+            id: 1,
+            img: `${laranja}`,
+            amount: 280,
+            quantity: 13,
+            subtotal: 560,
+            productName: 'Limão',
+        },
+
+        {
+            id: 2,
+            img: `${melancia}`,
+            amount: 10,
+            quantity: 1,
+            subtotal: 560,
+            productName: 'melancia',
+        },
+
+        {
+            id: 3,
+            img: `${mandioca}`,
+            amount: 300,
+            quantity: 5,
+            subtotal: 560,
+            productName: 'mandioca'
+        }
+    ])
+
+    function deleteProduct(id) {
+        const newListProduct = products.filter(product => product.id !== id);
+        setProducts(newListProduct)
+    }
+
     return (
         <C.Container>
             <div>
@@ -30,129 +68,56 @@ function Cart() {
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td>
-                                <img src={productImg} alt="" />
-                            </td>
+                        {products.map(product => (
 
-                            <td>
-                                Limão
-                            </td>
+                            <tr key={product.id}>
+                                <td>
+                                    <img src={product.img} alt="" />
+                                </td>
 
-                            <td>
-                                2
-                            </td>
+                                <td>
+                                    {product.productName}
+                                </td>
 
-                            <td>
-                                280kz
-                            </td>
+                                <td>
+                                    <C.ProductQuantityContainer>
+                                        <button>
+                                            <MdRemoveCircleOutline
+                                                size={20}
+                                                fill='#ff464c'
+                                            />
+                                        </button>
+                                        <input type="number" readOnly value={product.quantity} />
+                                        <button>
+                                            <MdAddCircleOutline
+                                                size={20}
+                                                fill='#4f8d41'
+                                            />
+                                        </button>
+                                    </C.ProductQuantityContainer>
+                                </td>
 
-                            <td>
-                                560kz
-                            </td>
+                                <td>
+                                    {product.amount}
+                                </td>
 
-                            <td id="trash" width="100%">
-                                <button>
-                                    <Trash
-                                        color='#ff464c'
-                                        size={20}
-                                    />
-                                </button>
-                            </td>
-                        </tr>
+                                <td>
+                                    {product.subtotal}
+                                </td>
 
-                        <tr>
-                            <td>
-                                <img src={productImg} alt="" />
-                            </td>
-
-                            <td>
-                                Limão
-                            </td>
-
-                            <td>
-                                2
-                            </td>
-
-                            <td>
-                                280kz
-                            </td>
-
-                            <td>
-                                560kz
-                            </td>
-
-                            <td id="trash" width="100%">
-                                <button>
-                                    <Trash
-                                        color='#ff464c'
-                                        size={20}
-                                    />
-                                </button>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <img src={productImg} alt="" />
-                            </td>
-
-                            <td>
-                                Limão
-                            </td>
-
-                            <td>
-                                2
-                            </td>
-
-                            <td>
-                                280kz
-                            </td>
-
-                            <td>
-                                560kz
-                            </td>
-
-                            <td id="trash" width="100%">
-                                <button>
-                                    <Trash
-                                        color='#ff464c'
-                                        size={20}
-                                    />
-                                </button>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <img src={productImg} alt="" />
-                            </td>
-
-                            <td>
-                                Limão
-                            </td>
-
-                            <td>
-                                2
-                            </td>
-
-                            <td>
-                                280kz
-                            </td>
-
-                            <td>
-                                560kz
-                            </td>
-
-                            <td id="trash" width="100%">
-                                <button>
-                                    <Trash
-                                        color='#ff464c'
-                                        size={20}
-                                    />
-                                </button>
-                            </td>
-                        </tr>
+                                <td width="100%">
+                                    <button
+                                        onClick={() => deleteProduct(product.id)}
+                                        id="trash"
+                                    >
+                                        <Trash
+                                            color='#ff464c'
+                                            size={20}
+                                        />
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
                     </tbody>
                 </C.Table>
 

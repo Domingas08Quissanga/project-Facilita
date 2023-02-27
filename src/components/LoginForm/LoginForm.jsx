@@ -2,8 +2,8 @@ import React from 'react';
 import * as C from './LoginFormStyled'
 import imgLogin from '../../assets/images/backgrounds/background.png'
 import { Route, Routes } from 'react-router-dom';
-import LoginCount from './LoginCount/LoginCount';
-import LoginCreateCount from './LoginCreateCount/LoginCreateCount';
+import LoginCount from '../LoginForm/LoginCount/LoginCount';
+import LoginCreateCount from '../LoginForm/LoginCreateCount/LoginCreateCount';
 
 
 // import { Container } from './styles';

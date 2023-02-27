@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
+    padding-bottom: 40px;
+
   div {
     margin: 0 auto;
     width: 1222px;
@@ -92,24 +94,47 @@ export const Table = styled.table`
 
   tbody {
     td {
-        padding-bottom: 1rem;
+      padding-bottom: 1rem;
 
       img {
         width: 50px;
         height: 50px;
         border-radius: 4px;
       }
+    }
 
-      button {
-        background: none;
-        margin-left: 97%;
+    button#trash {
+      background: none;
+      margin-left: 97%;
 
-        svg {
-          :hover {
-            opacity: 0.8;
-          }
+      svg {
+        :hover {
+          opacity: 0.8;
         }
       }
     }
   }
+`
+export const ProductQuantityContainer = styled.span`
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    > input {
+        border: 1px solid #eee;
+        width: 50px;
+        border-radius: 4px;
+        padding: 1px 5px;
+    }
+
+    > button {
+        background: none;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 `

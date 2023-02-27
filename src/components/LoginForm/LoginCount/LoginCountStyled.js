@@ -1,42 +1,70 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const container = styled.div`
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    display: flex;
+    gap: 10px;
+    
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  > p {
+    text-align: center;
+  }
+
+  form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    
+    align-items: flex-start;
+    gap: 20px;
+    width: 600px;
+    margin: 0 auto;
+  }
 
+  form legend {
+    font-size: 2.5rem;
+  }
 
-    h2 {
-        font-size: 2.5rem;
-        text-align: center;
-    
-        
-    }
-    
-    > p {
-        text-align: center;
-    }
-    
-    form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        gap: 20px;
-        
+  form legend span {
+    border-bottom: 2px solid #3e3e;
+  }
 
-    }
+  form button {
+    width: 100%;
+  }
+`
 
-    form legend{
-        font-size: 2.5rem;
+export const secondContainer = styled.section`
+    width: 100%;
+
+    svg {
+      margin-bottom: 20px;
     }
 
-    form legend span{
-        border-bottom: 2px solid #3e3e;
+    form {
+      width: 400px;
+      margin: 0 auto;
+
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      button {
+        width: 100%;
+        padding: 10px;
+      }
+
+      input {
+        width: 100%;
+        height: 40px;
+      }
     }
 
 `
