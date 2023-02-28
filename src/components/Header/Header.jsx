@@ -8,7 +8,7 @@ import { BsPersonFill } from "react-icons/bs";
 
 
 
-function Header() {
+function Header(nameCat) {
     const [open, setOpen] = useState(false);
 
     const categorias = [
