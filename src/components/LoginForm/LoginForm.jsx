@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import * as C from './LoginFormStyled'
 import imgLogin from '../../assets/images/backgrounds/background.png'
 import { Route, Routes } from 'react-router-dom';
@@ -8,13 +8,15 @@ import LoginCreateCount from '../LoginForm/LoginCreateCount/LoginCreateCount';
 
 // import { Container } from './styles';
 
-function LoginForm() {
+function LoginForm({ setIsLoggedIn }) {
+
+    setIsLoggedIn(true)
 
   return (
    <C.container>
-    <C.LoginSpaceLeft>
+    {/* <C.LoginSpaceLeft>
         <img src={imgLogin} alt="" />
-    </C.LoginSpaceLeft>
+    </C.LoginSpaceLeft> */}
     <C.LoginSpaceRight>
         <Routes>
             <Route path='/' element ={<LoginCount/>} />

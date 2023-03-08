@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header'
 import Home from './page/Home/Home';
@@ -12,12 +12,14 @@ import Vegetais from './page/Vegetais';
 // import { Container } from './styles';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+
   return (
     <BrowserRouter>
-      <Header />
+      {!isLoggedIn ? (<Header />) : null}
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/Login/*' element={<LoginForm />} />
+        <Route path='/Login/*' element={<LoginForm setIsLoggedIn={setIsLoggedIn} />} />
         <Route path='/Sobre/*' element={<Sobre />} />
         <Route path='/Contact/*' element={<Contacts />} />
         <Route path='/Carrinho' element={<Cart />} />

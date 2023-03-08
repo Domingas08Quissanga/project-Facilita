@@ -4,12 +4,13 @@ import styled from 'styled-components'
 
 export const container = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: white;
-    z-index: 1000;
-    position: absolute;
-
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+
 `
 
 export const LoginSpaceLeft = styled.div`

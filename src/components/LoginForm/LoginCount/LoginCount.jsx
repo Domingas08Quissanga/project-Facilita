@@ -3,29 +3,34 @@ import Button from '../../../components/Buttons/Button'
 import Inputs from '../../../components/Inputs/Inputs';
 import * as C from './LoginCountStyled'
 import { Link } from 'react-router-dom';
+import logo from "../../../assets/logo.png"
 import { ArrowLeft } from 'phosphor-react';
 
 function LoginCount() {
   return (
       <C.secondContainer>
-        <Link to='/'>
+        {/* <Link to='/'>
           <ArrowLeft
             size={22}
           />
-        </Link>
-        <h2>
+        </Link> */}
+        <section>
+          <img src={logo} alt="logo" />
+          <span>Iniciar Sessão</span>
+        </section>
+        {/* <h2>
           Bem-vindo de volta ao facilita !
-        </h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores veniam esse maiores eaque sapiente</p>
+        </h2> */}
         <form action="">
-          <legend>
+          {/* <legend>
             <span>Log</span>in
-          </legend>
-
-          <Inputs label='Email' type='email' />
-          <Inputs label='Senha' type='password' />
+          </legend> */}
+          <Inputs label='Email' type='email' placeholder={"Email"} />
+          <Inputs label='Senha' type='password' placeholder={"Senha"} />
           <Button text='Entrar' />
-          <Link to='createCount'>Crie sua conta</Link>
+          <span>
+              <Link to='createCount'>Crie sua conta</Link>
+          </span>
         </form>
       </C.secondContainer>
   );
