@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-
-
 export const container = styled.div`
     width: 100%;
     height: 100%;
@@ -10,7 +8,6 @@ export const container = styled.div`
     align-items: center;
     justify-content: center;
     padding-top: 6rem;
-
 `
 
 export const LoginSpaceLeft = styled.div`

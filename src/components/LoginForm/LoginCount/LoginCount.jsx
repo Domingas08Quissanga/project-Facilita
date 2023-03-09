@@ -4,7 +4,6 @@ import Inputs from '../../../components/Inputs/Inputs';
 import * as C from './LoginCountStyled'
 import { Link } from 'react-router-dom';
 import logo from "../../../assets/logo.png"
-import { ArrowLeft } from 'phosphor-react';
 
 function LoginCount() {
   return (
