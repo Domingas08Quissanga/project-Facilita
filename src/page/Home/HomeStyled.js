@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container= styled.div`
+export const Container = styled.div`
     width: 100%;
     
     .Categorias {
@@ -22,8 +22,6 @@ export const cardSlideHome = styled.div`
     align-items: center;
     justify-content: center;
     
-
-
     img{
         width: 100%;
         height: 280px;
@@ -48,6 +46,7 @@ export const cardTextHome = styled.div`
     h2{
         font-size: 4rem;
         color: white;
+        margin-top: 5rem;
     }
     h2 span{
         color: #3e0;
@@ -59,28 +58,10 @@ export const cardTextHome = styled.div`
         color: white;
     }
 
-    form{
-        width: 65%;
-        background: white;
-        padding: 16px;
-        display: flex;
-        align-items: center;
-        border-radius: 6px;
-        color: #3e3e3e
-
-    }
-    form input{
-        flex: 1;
-        margin-left: 10px;
-        border: none;
-        outline: none;
-        color: #3e3e3e
-     
-       
-    }
+    
 
 `
-export const cardInner= styled.div`
+export const cardInner = styled.div`
     width: 80%;
     padding: 1rem;
     margin: 0 auto;
@@ -106,13 +87,13 @@ export const cardInner= styled.div`
     }
 `
 
-export const cardItem= styled.div`
+export const cardItem = styled.div`
     width: 100%;
     display:flex;
     flex-wrap:wrap;
     justify-content: center;
 `
-export const cardCarousel= styled.div`
+export const cardCarousel = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,4 +165,32 @@ export const cardCarousel= styled.div`
         }
     }
    
+`
+
+export const ContainerSlide = styled.div`
+    width: 100%;
+    height: 100%;
+    max-height: 70rem;
+    position: relative;
+    form{
+        top: 58%;
+        left: 18%;
+        position: absolute;
+        width: 65%;
+        background: white;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        border-radius: 6px;
+        color: #3e3e3e
+
+    }
+    form input{
+        flex: 1;
+        margin-left: 10px;
+        border: none;
+        outline: none;
+        color: #3e3e3e  
+    }
+
 `

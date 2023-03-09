@@ -43,14 +43,29 @@ export const container = styled.div`
 
 export const secondContainer = styled.section`
     width: 100%;
-
     svg {
       margin-bottom: 20px;
+    }
+    
+    section{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+
+      span{
+        font-size: 1.5rem;
+        color: #383838;
+      }
+      
+      text-align: center;
     }
 
     form {
       width: 400px;
-      margin: 0 auto;
+      margin: 1rem auto;
 
       display: flex;
       flex-direction: column;
@@ -58,12 +73,17 @@ export const secondContainer = styled.section`
 
       button {
         width: 100%;
-        padding: 10px;
+        height: 3.3rem;
       }
 
       input {
         width: 100%;
-        height: 40px;
+        height: 3.3rem;
+      }
+
+      span{
+        margin-top: 0.5rem;
+        text-align: center;
       }
     }
 

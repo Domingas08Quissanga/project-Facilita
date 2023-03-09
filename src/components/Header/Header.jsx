@@ -53,10 +53,10 @@ function Header() {
 
                 <section>
                     <C.cardBtnHeader>
-                        <Link to='/Login'>
+                        <a href="/Login">
                             <span>Entrar</span>
                             <BsPersonFill size={20} />
-                        </Link>
+                        </a>
                     </C.cardBtnHeader>
 
                     <C.CartContainer>
