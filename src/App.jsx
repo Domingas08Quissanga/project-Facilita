@@ -13,14 +13,13 @@ import Vegetais from './page/Vegetais';
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+      {window.location.pathname.startsWith('/Login') ? null : <Header />}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Login/*' element={<LoginForm />} />
         <Route path='/Sobre/*' element={<Sobre />} />
         <Route path='/Contact/*' element={<Contacts />} />
         <Route path='/Carrinho' element={<Cart />} />
-
         <Route path='/Frutas' element={<Frutas />} />
         <Route path='/Verduras' element={<Verduras />} />
         <Route path='/Vegentais' element={<Vegetais />} />

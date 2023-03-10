@@ -1,14 +1,9 @@
 import styled from "styled-components";
 
-export const Container = styled.section `
-
+export const Container = styled.section`
+    display: flex;
     div {
         display: flex;
-        margin-top: 15px;
-
-        input {
-            height: 40px;
-        }
 
         :first-child {
             margin-right: 10px;
@@ -16,12 +11,28 @@ export const Container = styled.section `
     }
 
     form {
-        margin-top: 30px;
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        legend{
+            text-align: center;
+            color: #383838;
+        }
+        img{
+            align-self: center;
+        }
+        gap: 1rem;
+
+        input{
+            height: 3.5rem;
+        }
     }
 
     button {
         width: 100%;
+        max-width: 20rem;
+        align-self: center;
         padding: 10px;
-        margin-top: 30px;
+        height: 3.5rem;
     }
 `

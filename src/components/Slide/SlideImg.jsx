@@ -19,32 +19,32 @@ function SlideImg() {
     },
   ];
   return (
-    <div className="slide-container">
+    <C.ContainerSlide>
       <Slide>
         {slideImages.map((slideImage, index) => (
           <div key={index} >
-            <div style={{ 'backgroundImage': `url(${slideImage.url})`, backgroundSize: 'cover', height: "280px" }}>
+            <div style={{ 'backgroundImage': `url(${slideImage.url})`, backgroundSize: 'cover', height: "500px" }}>
               <div className='textAndInput'>
-                < C.cardTextHome>
+                <C.cardTextHome>
                   <h2>Seja bem-vindo ao <span>Facilita</span></h2>
                   <p>
                     Uma plataforma de vendas e produtos agricolas nacionais.
                   </p>
-                  <form action="#">
-                    <BsSearch />
-                    <input
-                      type="search"
-                      placeholder='Busce no Facilita ...'
-                      required
-                    />
-                  </form>
                 </C.cardTextHome>
               </div>
             </div>
           </div>
         ))}
       </Slide>
-    </div>
+      <form action="#">
+                    <BsSearch />
+                    <input
+                      type="search"
+                      placeholder='Busce no Facilita ...'
+                      required
+                    />
+      </form>
+    </C.ContainerSlide>
   );
 }
 

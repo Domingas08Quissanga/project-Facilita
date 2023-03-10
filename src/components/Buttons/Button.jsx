@@ -1,10 +1,10 @@
 import React from 'react';
 import  * as C from './ButtonStyled'
 
-function Button( { text } ) {
+function Button( { text, type } ) {
 
     return (
-        <C.Button>
+        <C.Button type={type}>
             {text}
         </C.Button>
     );
