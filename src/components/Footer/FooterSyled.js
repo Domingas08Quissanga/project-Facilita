@@ -6,6 +6,8 @@ const Container = styled.div`
   color: white;
   text-align: center;
   cursor: pointer;
+  margin-top: 80px;
+  
 
   div {
     padding: 2rem 0rem 1rem 0rem;

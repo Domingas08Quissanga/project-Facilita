@@ -2,7 +2,9 @@ import laranja from '../../assets/images/cards/laranja.webp'
 import limao from '../../assets/images/cards/limão.jpeg'
 import mandioca from '../../assets/images/cards/mandioca.jpg'
 import melancia from '../../assets/images/cards/melancia.jpeg'
-
+import tomate from '../../assets/tomate.jpg'
+import repolho from '../../assets/repolho.jpg'
+import cenoura from '../../assets/cenoura.jpg'
 export const ImageCards=[
     {
         image: laranja,
@@ -27,22 +29,22 @@ export const ImageCards=[
     {
         image: melancia,
         desc:'Melancia',
-        price:11,
+        price:1100,
     },
     {
-        image: melancia,
-        desc:'Melancia',
-        price:11,
+        image: tomate,
+        desc:'Tomate',
+        price:100,
     },
     {
-        image: melancia,
-        desc:'Melancia',
-        price:11,
+        image: repolho,
+        desc:'Repolho',
+        price:200,
     },
     {
-        image: melancia,
-        desc:'Melancia',
-        price:11,
+        image: cenoura,
+        desc:'Cenoura',
+        price:110,
     }
     
 ]

@@ -1,25 +1,33 @@
 import React from 'react';
 import Button from '../../../components/Buttons/Button'
 import Inputs from '../../../components/Inputs/Inputs';
-import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'phosphor-react';
+import { json, Link } from 'react-router-dom';
 import { Container } from './style';
+import { useState } from 'react';
 
 function LoginCreateCount() {
+  const [nome, setNome] = useState("")
+
+  async function handleCreateClient(e){
+    e.preventDefault()
+    const response = await fetch("http://localhost:3333/cliente", {
+      method: "POST",
+      body: JSON.stringify({nome})
+    })
+  }
+
   return (
     <Container>
-      <Link to='/Login'>
-        <ArrowLeft
+      <Link to='/Login'
           size={22}
-        />
-      </Link>
-      <form action="">
+      />
+      <form onSubmit={handleCreateClient}>
         <legend>
           <span>Criar</span> Conta
         </legend>
 
           <div>
-            <Inputs label='Nome:' type='text' />
+            <Inputs label='Nome:' type='text'  onChange={(e) => setNome(e.target.value)}/>
             <Inputs label='sobrenome' type='text' />
           </div>
 
@@ -35,7 +43,7 @@ function LoginCreateCount() {
 
           <Inputs label='data' type='date' />
 
-        <Button text='Cadastrar' />
+        <Button text='Cadastrar' type="submit"/>
       </form>
     </Container>
   );

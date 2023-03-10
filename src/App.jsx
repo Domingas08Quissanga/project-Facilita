@@ -9,7 +9,6 @@ import Cart from './page/Cart/index';
 import Frutas from './page/Frutas';
 import Verduras from './page/Verduras';
 import Vegetais from './page/Vegetais';
-// import { Container } from './styles';
 
 function App() {
   return (

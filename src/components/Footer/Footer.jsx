@@ -1,3 +1,4 @@
+import React from 'react';
 import * as C from "./FooterSyled"
 import logo from "../../assets/Logo.svg"
 import { FacebookLogo, WhatsappLogo, ChatTeardropDots } from 'phosphor-react'
