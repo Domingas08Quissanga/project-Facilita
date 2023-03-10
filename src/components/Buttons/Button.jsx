@@ -1,3 +1,4 @@
+import React from 'react';
 import  * as C from './ButtonStyled'
 
 function Button( { text, type } ) {

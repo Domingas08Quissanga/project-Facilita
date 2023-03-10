@@ -3,9 +3,9 @@ import * as C from './HeaderStyled'
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo/Logo.svg'
 import { BsPersonFill } from "react-icons/bs";
-
 import { ShoppingCart } from 'phosphor-react'
 // import { Container } from './styles';
+
 
 function Header() {
     return (

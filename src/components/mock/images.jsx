@@ -1,10 +1,13 @@
+
 import frutas from '../../assets/images/cards/Frutas.png'
+
 
 export const ImagesMock=[
     
     {
         imageSrc: frutas,
         description:'Todos'
+        
     },
     {
         imageSrc: frutas,

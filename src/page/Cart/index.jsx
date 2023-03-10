@@ -1,3 +1,4 @@
+import React from 'react';
 import { Trash, User } from 'phosphor-react';
 import { useState } from 'react';
 import { MdRemoveCircleOutline, MdAddCircleOutline } from 'react-icons/md'

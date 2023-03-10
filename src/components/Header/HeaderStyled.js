@@ -53,18 +53,19 @@ export const Nav = styled.nav`
 export const logo = styled.h1`
   a {
     color: #3e3e3e;
-    font-size: 1rem;
+    font-size: 1.5rem;
     gap: 5px;
-
+    font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-weight: 600;
+    font-weight: 800;
   }
 
   a span {
-    color: #3e3a;
+    color: #3e3e;
+    
   }
 
   a img {
