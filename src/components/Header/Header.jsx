@@ -6,6 +6,7 @@ import { BsPersonFill } from "react-icons/bs";
 import { ShoppingCart } from 'phosphor-react'
 // import { Container } from './styles';
 
+
 function Header() {
     return (
         <C.Header>
