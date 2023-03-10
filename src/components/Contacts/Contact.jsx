@@ -12,7 +12,7 @@ function Contacts() {
         <SlideImg />
         <C.Info>
         <h1>Pretende entrar em contacto comnosco ? envie ma mensagem para o nosso email
-          
+
         </h1>
   
           <form>
