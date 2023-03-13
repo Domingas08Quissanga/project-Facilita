@@ -1,143 +1,61 @@
 import React from 'react';
-import { Trash, User } from 'phosphor-react';
-import { useState } from 'react';
-import { MdRemoveCircleOutline, MdAddCircleOutline } from 'react-icons/md'
-import laranja from '../../assets/images/cards/laranja.webp'
-import melancia from '../../assets/images/cards/melancia.jpeg'
-import mandioca from '../../assets/images/cards/mandioca.jpg'
+import { User } from 'phosphor-react';
 import * as C from './cartStyle'
+import { useContext } from 'react';
+import CartItem from '../../components/CartItems';
+import { CartContext } from '../../context/CartContext';
+import { CartProvider } from '../../context/CartContext';
 
 function Cart() {
-    const [products, setProducts] = useState([
-        {
-            id: 1,
-            img: `${laranja}`,
-            amount: 280,
-            quantity: 13,
-            subtotal: 560,
-            productName: 'Limão',
-        },
-
-        {
-            id: 2,
-            img: `${melancia}`,
-            amount: 10,
-            quantity: 1,
-            subtotal: 560,
-            productName: 'melancia',
-        },
-
-        {
-            id: 3,
-            img: `${mandioca}`,
-            amount: 300,
-            quantity: 5,
-            subtotal: 560,
-            productName: 'mandioca'
-        }
-    ])
-
-    function deleteProduct(id) {
-        const newListProduct = products.filter(product => product.id !== id);
-        setProducts(newListProduct)
-    }
 
     return (
         <C.Container>
-            <div>
-                <button>
-                    <User
-                        size={15}
-                        color='#222226'
-                    />
-                    Minha conta
-                </button>
-            </div>
-
-            <section>
-                <C.Table>
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Produto</th>
-                            <th>Quantidade</th>
-                            <th>Preço</th>
-                            <th>
-                                Subtotal
-                            </th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        {products.map(product => (
-
-                            <tr key={product.id}>
-                                <td>
-                                    <img src={product.img} alt="" />
-                                </td>
-
-                                <td>
-                                    {product.productName}
-                                </td>
-
-                                <td>
-                                    <C.ProductQuantityContainer>
-                                        <button>
-                                            <MdRemoveCircleOutline
-                                                size={20}
-                                                fill='#ff464c'
-                                            />
-                                        </button>
-                                        <input type="number" readOnly value={product.quantity} />
-                                        <button>
-                                            <MdAddCircleOutline
-                                                size={20}
-                                                fill='#4f8d41'
-                                            />
-                                        </button>
-                                    </C.ProductQuantityContainer>
-                                </td>
-
-                                <td>
-                                    {product.amount}
-                                </td>
-
-                                <td>
-                                    {product.subtotal}
-                                </td>
-
-                                <td width="100%">
-                                    <button
-                                        onClick={() => deleteProduct(product.id)}
-                                        id="trash"
-                                    >
-                                        <Trash
-                                            color='#ff464c'
-                                            size={20}
-                                        />
-                                    </button>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </C.Table>
-
-                <footer>
+                <div>
                     <button>
-                        Finalizar pedido
+                        <User
+                            size={15}
+                            color='#222226'
+                        />
+                        Minha conta
                     </button>
+                </div>
+                
+                <section>
+                    <head>
+                        <div className='image'>
+                        </div>
 
-                    <span>
-                        <small>
-                            Total
-                        </small>
+                        <div className='name'>
+                            <p>Produto</p>
+                        </div>
 
-                        <h2>
-                            1680kz
-                        </h2>
-                    </span>
-                </footer>
-            </section>
+                        <div className='amount'>
+                            <p>Quantidade</p>
+                        </div>
+
+                        <div className='price'>
+                            <p>Preço</p>
+                        </div>
+
+                        <div className='discard'> 
+                        </div>
+                    </head>
+                    <CartItem />
+                    <footer>
+                        <span>
+                            <small>
+                                Total
+                            </small>
+
+                            <h2>
+                                1680kz
+                            </h2>
+                        </span>
+                        <button>
+                            Finalizar pedido
+                        </button>
+                    </footer>
+                </section>
         </C.Container>
     )
 }
