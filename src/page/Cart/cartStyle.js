@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-export const Container = styled.section`
-    padding-bottom: 40px;
+export const Container = styled.div`
+  padding-bottom: 40px;
 
   div {
     margin: 0 auto;
@@ -29,13 +29,122 @@ export const Container = styled.section`
   }
 
   section {
-    width: 1222px;
+    width: 90%;
     margin: 0 auto;
     margin-top: 30px;
     border: 1px solid #eee;
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    padding: 30px;
+    padding: 1rem;
+
+    head{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 60px;
+      color: #0003;
+      font-size: 20px;
+      gap: 1em;
+      border-bottom: 3px solid gainsboro;
+      
+      .image{
+        width: 20%;
+        margin: 0;
+      }
+      
+      .name{
+        width: 30%;
+        p{
+          width: 100%;
+          text-align: left;
+        }
+      }
+
+      .amount{
+        width: 20%;
+        p{
+          width: 100%;
+          text-align: left;
+        }
+      }
+
+      .price{
+        width: 10%;
+        p{
+          width: 100%;
+          text-align: left;
+        }
+      }
+
+      .discard{
+        width: 20%;
+      }
+    }
+
+    div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 60px;
+      color: #000;
+      font-size: 20px;
+      margin-bottom: 0.1rem;
+      gap: 1em;
+      
+      >
+      button{
+        width: 1rem;
+        text-align: center;
+      }
+
+      .image{
+        width: 20%;
+        margin: 0;
+        img{
+          width: 150px
+        }
+      }
+      
+      .name{
+        width: 30%;
+        p{
+          width: 100%;
+          text-align: left;
+        }
+      }
+
+      .amount{
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+        input{
+          width: 20%;
+          text-align: center;
+        }
+        button{
+          width: 20%;
+          text-align: center;
+          justify-content: center;
+        }
+      }
+
+      .price{
+        width: 10%;
+        color: #000;
+      }
+
+      .discard{
+        width: 20%;
+        button{
+          width: 20%;
+        }
+      }
+    }
 
     > footer {
       border-top: 1px solid #eee;
