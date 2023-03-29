@@ -2,9 +2,8 @@ import React from 'react';
 import * as C from './HeaderStyled'
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo/Logo.svg'
-import { BsPersonFill } from "react-icons/bs";
+import { BsPersonFill, BsFillHouseDoorFill } from "react-icons/bs";
 import { ShoppingCart } from 'phosphor-react'
-// import { Container } from './styles';
 
 
 function Header() {
@@ -17,14 +16,14 @@ function Header() {
                         <span>Faci<small>lita</small></span>
                     </Link>
                 </C.logo>
-                <ul>
-                    <li>
-                        <Link to='/'>Início</Link>
+                <ul>                  <li>
+                        <Link to='/'>
+                    
+                            Início</Link>
                     </li>
 
                     <C.ProductNavegation>
-                        Produtos
-
+                     Produtos
                         <section>
                             <div>
                                 <Link to='/Frutas'>

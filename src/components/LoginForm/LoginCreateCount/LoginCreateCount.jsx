@@ -3,14 +3,13 @@ import Button from '../../../components/Buttons/Button'
 import Inputs from '../../../components/Inputs/Inputs';
 import { Link } from 'react-router-dom';
 import { Container } from './style';
-import { useState } from 'react';
+import { useState } from 'react'
 import * as yup from "yup"
 import logo from "../../../assets/logo.png"
 import {useFormik} from "formik"
 import { toast } from 'react-toastify';
 import { postClient } from '../services';
 import { useNavigate } from "react-router-dom"
-
 
 function LoginCreateCount() {
   const navigate = useNavigate()
@@ -28,7 +27,7 @@ function LoginCreateCount() {
       sobrenome: yup.string().required("o sobrenome é obrigatório"),
      email: yup.string().required("o e-mail é obrigatório"),
       contacto: yup.number().required("o contacto é obrigatório"),
-      password: yup.string().required("senha é obrigatório"),
+      password: yup.string().required("senha é obrigatória"),
     }),
     onSubmit: (data)=> handlePost(data)
   })
@@ -37,9 +36,9 @@ function LoginCreateCount() {
     try{
       const client = await postClient(data)
       if(client){
-        toast.success("Cliente cadastro com sucesso!")
-        console.log(client, "Cliente cadastro com sucesso!");
-        navigate("/")
+        toast.success("Cliente cadastrodo(a) com sucesso!")
+        console.log(client, "Cliente cadastrodo(a) com sucesso!");
+        window.location.href = ""
       }
     }catch(error){
       toast.error(`${error}`)
@@ -47,12 +46,14 @@ function LoginCreateCount() {
 
   }
 
+
+
   return (
     <Container>
       <Link to='/Login'
           size={22}
+
       />
-      
       <form onSubmit={formik.handleSubmit}>
         <img src={logo} alt="" />
         <legend>
@@ -62,6 +63,7 @@ function LoginCreateCount() {
           <div>
             <Inputs label='Nome:' type='text' placeholder={"Primeiro nome"} onChange={formik.handleChange} id="nome" name="nome"/>
             <Inputs label='sobrenome' type='text' placeholder={"sobrenome"} onChange={formik.handleChange} id="sobrenome" name="sobrenome"/>
+
           </div>
 
           <div>
@@ -74,16 +76,11 @@ function LoginCreateCount() {
             <Inputs label='Informe a senha novamente:' type='password' placeholder={"Confirmar palavra-passe"} />
           </div>
 
-          
 
         <Button text='Cadastrar' type="submit"/>
       </form>
     </Container>
   );
-  
+
 }
-
-
-  
-
 export default LoginCreateCount;

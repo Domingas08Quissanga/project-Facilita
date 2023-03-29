@@ -91,15 +91,15 @@ export const cardItem = styled.div`
     width: 100%;
     display:flex;
     flex-wrap:wrap;
-    justify-content: center;
+    justify-content: center
 `
 export const cardCarousel = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 12rem;
-    border-radius: 10px;
+    width: 20rem;
+    border-radius: 17px;
     margin: 20px;
     text-align: center;
     justify-content: center;
@@ -110,6 +110,7 @@ export const cardCarousel = styled.div`
     cursor: pointer;
     transition: 0.2s;
     text-align: left;
+    height: 25rem;
 
     hr {
         z-index: 99999;
@@ -124,7 +125,7 @@ export const cardCarousel = styled.div`
     }
 
     img  {
-        height: 80px;
+        height: 50%;
         width: 100%;
     }
 

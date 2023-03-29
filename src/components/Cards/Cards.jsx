@@ -4,11 +4,8 @@ import mandioca from '../../assets/images/cards/mandioca.jpg'
 import melancia from '../../assets/images/cards/melancia.jpeg'
 import tomate from '../../assets/tomate.jpg'
 import repolho from '../../assets/repolho.jpg'
-
-
-//Testw
-
 import cenoura from '../../assets/cenoura.jpg'
+
 export const ImageCards=[
     {
         image: laranja,

@@ -8,22 +8,14 @@ import logo from "../../../assets/logo.png"
 function LoginCount() {
   return (
       <C.secondContainer>
-        {/* <Link to='/'>
-          <ArrowLeft
-            size={22}
-          />
-        </Link> */}
+       
         <section>
           <img src={logo} alt="logo" />
           <span>Iniciar Sessão</span>
         </section>
-        {/* <h2>
-          Bem-vindo de volta ao facilita !
-        </h2> */}
+       
         <form action="">
-          {/* <legend>
-            <span>Log</span>in
-          </legend> */}
+         
           <Inputs label='Email' type='email' placeholder={"Email"} />
           <Inputs label='Senha' type='password' placeholder={"Senha"} />
           <Button text='Entrar' />
